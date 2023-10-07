@@ -5,16 +5,13 @@
 #include <util.hpp>
 
 Bars* BarsObject = new Bars();
-sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Generate Bars");
+sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Sorting Visualizer");
 
 int main() {   
 
-    // DEFINE OBJECTS OF CLASSES HERE. 
-
-    // Bars* BarsObject = new Bars();
     UI* UIObject = new UI();
     randi* RandomObject = new randi();
-    
+        
     // DEFINE VARIABLES AND ALL THE DATA STRUCTURES
     std::vector<int> values(numberOfBars);
 
@@ -22,8 +19,7 @@ int main() {
     std::cout << numberOfBars << '\n';
 
     RandomObject->randVec(values, 100, windowHeight-100);
-    // sort(values.begin(), values.end());
-    BarsObject->drawVec(values, numberOfBars);
+    sort(values.begin(), values.end());
     UIObject->icon(window);
 
     delete RandomObject;
@@ -37,8 +33,9 @@ int main() {
         }
 
         window.clear(sf::Color(40, 40, 40));
-        BarsObject->drawBars(window); 
+        BarsObject->drawVec(values, numberOfBars, window); 
         window.display();
+
     }
 
     delete BarsObject;

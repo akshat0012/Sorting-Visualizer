@@ -56,7 +56,7 @@ public:
 
     }
 
-    void drawVec(std::vector<int>& vec, int numberOfBars) {
+    void drawVec(std::vector<int>& vec, int numberOfBars, sf::RenderWindow& window) {
         for (int i = 0; i < numberOfBars; i++) {
             int barHeight = vec[i];
 
@@ -71,10 +71,6 @@ public:
             bar[i * 4 + 2].color = sf::Color(131, 165, 152);
             bar[i * 4 + 3].color = sf::Color(131, 165, 152);
         }
-    }
-    
-
-    void drawBars(sf::RenderWindow& window) {
         window.draw(bar);
     }
     
