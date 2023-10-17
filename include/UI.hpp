@@ -15,16 +15,12 @@ public:
     // This functions set the window Icon
     void icon(sf::RenderWindow& window) {
         auto image = sf::Image{};
-        if (!image.loadFromFile("/home/maliciouschimpanzee/Downloads/sfml/sfml-devel/assets/sfml.png"))
+        if (!image.loadFromFile("/home/maliciouschimpanzee/Downloads/github-repo/Sorting-Visualizer/assets/images/sfml.png"))
         {
             // Error handling...
             std::cout << "Error in loading the file\n";
         }
         window.setIcon(image.getSize().x, image.getSize().y, image.getPixelsPtr());
-    }
-    
-    void UI_clear(sf::RenderWindow& window) {
-        window.clear(sf::Color(40, 40, 40));
     }
 
     // Destructor
@@ -81,4 +77,5 @@ public:
     }
 
 };
+
 #endif
