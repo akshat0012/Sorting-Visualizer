@@ -10,14 +10,13 @@ Bars* BarsObject = new Bars();
 sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Project");
 
 int main() {   
-    
 
     UI* UIObject = new UI();
     randi* RandomObject = new randi();
     Sort* SortObject = new Sort();
     
     // define all the error bounding stuff here 
-    window.setFramerateLimit(144);
+    window.setFramerateLimit(60);
 
 
     // DEFINE VARIABLES AND ALL THE DATA STRUCTURES
@@ -27,7 +26,6 @@ int main() {
     std::cout << numberOfBars << '\n';
 
     RandomObject->randVec(values, 100, windowHeight-100);
-    // sort(values.begin(), values.end());
     UIObject->icon(window);
 
     delete RandomObject;
