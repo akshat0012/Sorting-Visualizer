@@ -1,21 +1,25 @@
 #include <iostream>
 #include <vector>
+#include <unistd.h>
 #include <SFML/Graphics.hpp>
 
 #ifndef UI_hpp
 #define UI_hpp
 
-const int windowHeight = 1000;
-const int windowWidth = 1000;
-const int barWidth = 4;
+const int windowHeight = 450;
+const int windowWidth = 800;
+const int barWidth = 5;
 const int numberOfBars = (windowWidth / barWidth);
 
 class UI {  
 public:
     // This functions set the window Icon
     void icon(sf::RenderWindow& window) {
+
+		std::string username = getlogin();
+		std::string path = "/home/" + username + "/github-repo/Sorting-Visualizer/assets/images/sfml.png";
         auto image = sf::Image{};
-        if (!image.loadFromFile("/home/maliciouschimpanzee/Downloads/github-repo/Sorting-Visualizer/assets/images/sfml.png"))
+        if (!image.loadFromFile("/home/rabbit/github-repo/Sorting-Visualizer/assets/images/sfml.png"))
         {
             // Error handling...
             std::cout << "Error in loading the file\n";
@@ -27,8 +31,6 @@ public:
     ~UI() {
         std::cout << "[UI_object_deleted]\n";
     }
-
-
 };
 
 class Bars {

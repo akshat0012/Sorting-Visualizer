@@ -1,3 +1,7 @@
+# currently working on
+- Responsive window design
+- Change the speed of the Animation 
+
 # Sorting Visualizer with SFML
 
 ![Demo GIF](demo.gif)
@@ -5,9 +9,7 @@
 This project is a Sorting Visualizer built using the [SFML](https://www.sfml-dev.org/) library in C++. It allows you to visualize various sorting algorithms in action.
 
 ## Features
-- Visualize sorting algorithms such as Bubble Sort, Quick Sort, Merge Sort, and more.
-- Adjustable array size and sorting speed for customization.
-- Interactive user interface for controlling the visualization.
+- Visualize sorting algorithms such as Bubble Sort
 
 ## Table of Contents
 
