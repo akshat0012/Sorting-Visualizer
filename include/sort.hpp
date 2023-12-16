@@ -8,7 +8,6 @@
 class Sort {
 public:
     void bubbleSort(std::vector<int>& nums, sf::RenderWindow& window, Bars* BarsObject) {
-
         for (int i = 0; i < nums.size(); i++) {
             for (int j = 0; j < nums.size() - i - 1; j++) {
                 if (nums[j] > nums[j + 1]) {
@@ -16,7 +15,6 @@ public:
                         window.clear(sf::Color(40, 40, 40));
                         BarsObject->drawVec(nums, numberOfBars, window);
                         window.display();
-
                 }
             }
         }
@@ -26,8 +24,6 @@ public:
     ~Sort() {
         std::cout<< "[SortObject_deleted]\n";
     }
-
-
 };
 
 #endif

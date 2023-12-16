@@ -6,16 +6,15 @@
 #ifndef UI_hpp
 #define UI_hpp
 
-const int windowHeight = 450;
-const int windowWidth = 800;
-const int barWidth = 5;
+const int windowHeight = 1080/2;
+const int windowWidth = 1920/2;
+const int barWidth = 4;
 const int numberOfBars = (windowWidth / barWidth);
 
 class UI {  
 public:
     // This functions set the window Icon
     void icon(sf::RenderWindow& window) {
-
 		std::string username = getlogin();
 		std::string path = "/home/" + username + "/github-repo/Sorting-Visualizer/assets/images/sfml.png";
         auto image = sf::Image{};

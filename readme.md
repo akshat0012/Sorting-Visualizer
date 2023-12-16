@@ -1,10 +1,11 @@
 # currently working on
-- Responsive window design
-- Change the speed of the Animation 
+- [ ] Responsive window design
+- [ ] Render components properly when resized
+- [ ] Change the speed of the Animation 
 
 # Sorting Visualizer with SFML
 
-![Demo GIF](demo.gif)
+![Sorting Visualizer](/assets/images/sfml.png)
 
 This project is a Sorting Visualizer built using the [SFML](https://www.sfml-dev.org/) library in C++. It allows you to visualize various sorting algorithms in action.
 
@@ -35,19 +36,20 @@ Before running the program, ensure you have the following installed:
 
    ```bash
    git clone https://github.com/your-username/Sorting-Visualizer.git
-   
 ### Usage
 1. Compile:
    
-   To compile the file `cd` into `Sorting-Visualizer` file and compile `main.cpp` file and make sure to include the include folder while compiling, 
+   To compile the file `cd` into `Sorting-Visualizer/src` file and compile `main.cpp` file and make sure to include the `include` folder while compiling, 
    and make sure to link all the flags.
   
     ```shell
-    g++ -I include -o path/to/build_dir src/main.cpp -lsfml-system -lsfml-window -lsfml-graphics
-2. Run:
+    cd Sorting-Visualizer
+    g++ -I include -o Sorting-Visualizer src/main.cpp -lsfml-system -lsfml-window -lsfml-graphics
+    ```
    
+2. Run:
     To run the executable file just do this
     > Be sure not mess up paths while compiling the source file after compiling `cd` into whatever dir you compiled the executable and run the executable by this command.
-
     ```shell
-    ./main
+    ./Sorting-Visualizer
+    ```
