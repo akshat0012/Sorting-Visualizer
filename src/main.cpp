@@ -6,11 +6,11 @@
 #include <algorithm>
 #include <SFML/Graphics.hpp>
 
-Bars* BarsObject = new Bars();
-sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Project");
 
 int main() {   
+    sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Project");
 
+    Bars* BarsObject = new Bars();
     UI* UIObject = new UI();
     randi* RandomObject = new randi();
     Sort* SortObject = new Sort();
@@ -45,8 +45,8 @@ int main() {
             }
 
         }
-        /* SortObject->bubbleSort(values, window, BarsObject); */
-        // BarsObject->drawVec(values, numberOfBars, window);
+        // window.clear(sf::Color::Black);
+        // window.display();
     }
    
     delete BarsObject;

@@ -5,7 +5,7 @@
 
 # Sorting Visualizer with SFML
 
-![Sorting Visualizer](/assets/images/sfml.png)
+![Screen Shot](screenshot.png)
 
 This project is a Sorting Visualizer built using the [SFML](https://www.sfml-dev.org/) library in C++. It allows you to visualize various sorting algorithms in action.
 
@@ -17,10 +17,7 @@ This project is a Sorting Visualizer built using the [SFML](https://www.sfml-dev
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-- [Supported Sorting Algorithms](#supported-sorting-algorithms)
-- [Contributing](#contributing)
-- [License](#license)
+- [Usage (Linux)](#usage)
 
 ## Getting Started
 
