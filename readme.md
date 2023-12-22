@@ -5,7 +5,13 @@
 - [ ] Render components properly when resized
 - [ ] Change the speed of the Animation 
 
+<<<<<<< HEAD
 ![Screen Shot](screenshot.png)
+=======
+# Sorting Visualizer with SFML
+
+![Sorting Visualizer](./assets/images/sfml.png)
+>>>>>>> 79a1a0b8f5bb4c44f2791ecc2b80298e1ea1b319
 
 This project is a Sorting Visualizer built using the [SFML](https://www.sfml-dev.org/) library in C++. It allows you to visualize various sorting algorithms in action.
 
