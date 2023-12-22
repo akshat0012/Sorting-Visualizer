@@ -1,9 +1,9 @@
+# Sorting Visualizer with SFML
+
 # currently working on
 - [ ] Responsive window design
 - [ ] Render components properly when resized
 - [ ] Change the speed of the Animation 
-
-# Sorting Visualizer with SFML
 
 ![Screen Shot](screenshot.png)
 
