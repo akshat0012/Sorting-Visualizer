@@ -8,7 +8,7 @@
 
 const int windowHeight = 1080/2;
 const int windowWidth = 1920/2;
-const int barWidth = 4;
+const int barWidth = 10;
 const int numberOfBars = (windowWidth / barWidth);
 
 class UI {  

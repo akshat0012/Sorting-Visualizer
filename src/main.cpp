@@ -7,6 +7,7 @@
 #include <SFML/Graphics.hpp>
 
 
+
 int main() {   
     sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Project");
 
@@ -25,7 +26,6 @@ int main() {
     UIObject->icon(window);
     // BarsObject->drawVec(values, numberOfBars, window);
 
-    delete RandomObject;
     delete UIObject;
     
     while (window.isOpen()) {
@@ -40,13 +40,32 @@ int main() {
             }
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::S) {
-                    SortObject->bubbleSort(values, window, BarsObject);
+                    SortObject->bubbleSort(values, window, BarsObject); 
                 }
             }
-
+            if (event.type == sf::Event::KeyPressed) {
+                if (event.key.code == sf::Keyboard::R) {
+                    RandomObject->randVec(values, 20, windowHeight-100);
+                    window.clear();
+                    BarsObject->drawVec(values, numberOfBars, window);
+                    /* RandomObject->show(values); */
+                    window.display();
+                }
+            }
+            if (event.type == sf::Event::GainedFocus) {
+                window.clear();
+                BarsObject->drawVec(values, values.size(), window);
+                window.display();
+            }
+            if (event.type == sf::Event::Resized) {
+                // Adjust the view to the new size of the window
+                sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
+                window.setView(sf::View(visibleArea));
+                window.clear();
+                BarsObject->drawVec(values, values.size(), window);
+                window.display();
+            }
         }
-        // window.clear(sf::Color::Black);
-        // window.display();
     }
    
     delete BarsObject;

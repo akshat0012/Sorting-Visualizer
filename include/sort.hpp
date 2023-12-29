@@ -12,7 +12,7 @@ public:
             for (int j = 0; j < nums.size() - i - 1; j++) {
                 if (nums[j] > nums[j + 1]) {
                     std::swap(nums[j], nums[j + 1]);
-                        window.clear(sf::Color(40, 40, 40));
+                        window.clear(sf::Color::Black);
                         BarsObject->drawVec(nums, numberOfBars, window);
                         window.display();
                 }
