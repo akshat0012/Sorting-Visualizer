@@ -6,8 +6,6 @@
 #include <algorithm>
 #include <SFML/Graphics.hpp>
 
-
-
 int main() {   
     sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Project");
 
@@ -40,15 +38,22 @@ int main() {
             }
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::S) {
-                    SortObject->bubbleSort(values, window, BarsObject); 
+                    
+                    // seperate thread creation for bubbleSort function
+                    std::thread t1([SortObject, &values, &window, &BarsObject]() {
+                            SortObject->bubbleSort(values, window, BarsObject);
+                    });
+/*                     SortObject->bubbleSort(values, window, BarsObject);  */
+
+                    t1.join();
                 }
+
             }
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::R) {
                     RandomObject->randVec(values, 20, windowHeight-100);
                     window.clear();
                     BarsObject->drawVec(values, numberOfBars, window);
-                    /* RandomObject->show(values); */
                     window.display();
                 }
             }
@@ -67,7 +72,7 @@ int main() {
             }
         }
     }
-   
+    delete RandomObject;
     delete BarsObject;
     delete SortObject;
     return 0;

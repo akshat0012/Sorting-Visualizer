@@ -2,10 +2,20 @@
 #include <UI.hpp>
 #include <util.hpp>
 #include <vector>
+#include <icon_data.h>
+
+sf::Texture texture;
+if (!texture.loadFromMemory(sfml_png)) {
+    return 0;
+}
 
 
 int main() {
+
     sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Something else");
+    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+
+
     Bars* obj = new Bars();
     randi* robj = new randi(); 
     
